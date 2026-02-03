@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>SM Mod8 Assignmnet</title>
   </head>
-  <body>
+  <body id="bkgr" style="background-color: #eef;">
     <h1>Cookie Clicker: An Event Handler</h1>
-  </body>
+
   <button id="button">More!</button>
   <p id="counter">Cookies: 0</p>
   <p id="msmsg">Message: </p>
@@ -15,6 +15,7 @@
     const button = document.getElementById("button");
     const ctr = document.getElementById("counter");
     const msg = document.getElementById("msmsg");
+    const bkgr = document.getElementById("bkgr");
 
     function increaseCounter(){
         counter++;
@@ -22,15 +23,19 @@
 
         if (counter === 10){
             msg.innerHTML = "Message: 10 clicks → You’re just getting started";
+            bkgr.style.backgroundColor = "#FFC1C1";
         };
         if (counter === 25){
             msg.innerHTML = "Message: 25 clicks → Wow, that’s a lot of cookies";
+            bkgr.style.backgroundColor = "#FF7F7F";
         };
         if (counter === 50){
             msg.innerHTML = "Message: 50 clicks → Are you still clicking?";
+            bkgr.style.backgroundColor = "#FF0000";
         };
         if (counter === 100){
             msg.innerHTML = "Message: 100 clicks → You win! Maybe take a break";
+            bkgr.style.backgroundColor = "#8B0000";
         };
     };
 
@@ -38,5 +43,5 @@
 
 
   </script>
-
+  </body>
 </html>
