@@ -6,6 +6,37 @@
   </head>
   <body>
     <h1>Cookie Clicker: An Event Handler</h1>
-    <p>Click for a surprise!</p>
   </body>
+  <button id="button">More!</button>
+  <p id="counter">Cookies: 0</p>
+  <p id="msmsg">Message: </p>
+  <script>
+    let counter = 0; 
+    const button = document.getElementById("button");
+    const ctr = document.getElementById("counter");
+    const msg = document.getElementById("msmsg");
+
+    function increaseCounter(){
+        counter++;
+        ctr.innerHTML = "Cookies: " + counter;
+
+        if (counter === 10){
+            msg.innerHTML = "Message: 10 clicks → You’re just getting started";
+        };
+        if (counter === 25){
+            msg.innerHTML = "Message: 25 clicks → Wow, that’s a lot of cookies";
+        };
+        if (counter === 50){
+            msg.innerHTML = "Message: 50 clicks → Are you still clicking?";
+        };
+        if (counter === 100){
+            msg.innerHTML = "Message: 100 clicks → You win! Maybe take a break";
+        };
+    };
+
+    button.addEventListener("click", increaseCounter);
+
+
+  </script>
+
 </html>
